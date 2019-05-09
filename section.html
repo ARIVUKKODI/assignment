@@ -1,0 +1,58 @@
+<html>
+<body>
+<style>
+h2 {
+  color: red;
+ 
+}
+h2 + div {
+  color: green;
+}
+.myList li {
+  border: 1px solid green;
+}
+.myClass {
+  background: green;
+}
+
+#myId {
+  background: yellow;
+}
+
+.myClass.otherClass {
+  color: white;
+}
+
+section > div:last-child {
+  border: 1px solid #ff69b4 ;
+}
+</style>
+<h2>start</h2>
+<section>
+<div>
+ Sibling Selector
+</div>
+<main>
+<ul class = myList>
+<li>apple</li>
+<li>banana</li>
+<li>mango</li>
+<li>orange</li>
+<div class = myclass >
+<p> section completed </p>
+</div>
+<div class = "myclass otherclass">
+<p> other class section </p>
+</div>
+<div id=myId class=otherClass> id section</div>
+</main>
+<div class = lastbefore>
+<ul>
+<li> Don't Style Me </li>
+<ul>
+</div>
+<div class = last>completed</div>
+</section>
+</body>
+</html>
+
