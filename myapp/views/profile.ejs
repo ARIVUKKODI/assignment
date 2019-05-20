@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to change the text of this paragraph.</p>
+
+<p>This is also a paragraph.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementsByTagName("P")[0].innerHTML = "Hello World!";
+  var x = document.URL;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
