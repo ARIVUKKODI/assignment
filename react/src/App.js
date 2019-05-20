@@ -58,6 +58,14 @@ class Myapp extends React.Component {
     });
   };
 
+
+  handleSubmit = () => {
+    const {
+      name
+    } = this.state;
+    push("/find");
+  };
+
   render() {
 
     return (
