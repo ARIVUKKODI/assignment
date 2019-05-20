@@ -1,0 +1,22 @@
+
+h2 {
+ color: blue;
+ text-align: center;
+ font: italic 200% fantasy;
+}
+.myclass {
+  background: green;
+}
+#myId {
+  background: yellow;
+}
+.myList li {
+  border: 1px solid green;
+}
+.myclass.otherclass {
+  color: white;
+}
+
+section > div:last-child {
+  border: 1px solid pink;
+}
