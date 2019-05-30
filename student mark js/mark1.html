@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel = "stylesheet"
+   type = "text/css"
+   href = "myFirst.css" />
+        <title>Student Results</title>
+        
+    </head>
+<script type="text/javascript">
+function getReport(){
+
+             
+	    var total = "";
+	    var grade = ""; 
+            var result="";
+            var gradepoints = "";
+
+	    var tamilMarks = document.getElementById('txttamil').value;
+            var engMarks = document.getElementById('txtEnglish').value;
+            var mathsMarks = document.getElementById('txtMaths').value;
+            var scienceMarks = document.getElementById('txtScience').value;
+	    var socialscienceMarks = document.getElementById('txtsocialscience').value;
+            
+            
+             var totalMarks = tamilMarks - (- engMarks) - (- mathsMarks) - (- scienceMarks) - (-socialscienceMarks);
+            
+           
+            var averageMarks = totalMarks / 5;             
+            
+                          
+            if(averageMarks > 60 && averageMarks <= 100){
+		 
+		grade = "A";
+		result="First Class";
+		gradepoints ="10";
+		}
+	    else if(averageMarks > 50 && averageMarks < 60){
+				grade = "B";
+			        result="Second Class";
+				gradepoints ="7";
+                    }
+	    else if(averageMarks > 40 && averageMarks < 50){
+			
+                  grade = "C"; 
+		result="Third Class";
+		gradepoints ="4";
+		}
+	   else{
+
+                 grade = "D"; 
+		result="Fail";
+		gradepoints ="0"; 
+              }
+                   
+	  
+                
+               
+            document.getElementById('txtStudentName').value = document.getElementById('txtName').value;
+            document.getElementById('txtStudentClass').value = document.getElementById('txtClass').value;
+            document.getElementById('txtTotalMarks').value = totalMarks;
+            document.getElementById('txtAvgMarks').value = averageMarks;
+            document.getElementById('txtGrade').value = grade;
+	    document.getElementById('txtgradepoints').value = gradepoints;
+            document.getElementById('txtResult').value = result;
+
+} 
+</script>
+    <body>        
+            <fieldset style="width:600px">
+                <legend><b>Student Input Section:</b></legend>
+                Name:<input type="text" id="txtName">   
+                Class:<input type="text" id="txtClass"> <br/><br/>
+                <table border="1">
+		    <tr><td>Tamil</td><td><input type="text" id="txttamil"></td></tr>
+                    <tr><td>English</td><td><input type="text" id="txtEnglish"></td></tr>
+                    <tr><td>Maths</td><td><input type="text" id="txtMaths"></td></tr>
+                    <tr><td>Science</td><td><input type="text" id="txtScience"></td></tr>
+	<tr><td>Socialscience</td><td><input type="text" id="txtsocialscience"></td></tr>             
+                </table><br/><br/>
+                <input type="button" onclick= getReport() value="Get Result">
+            </fieldset>
+            
+            <h2>Report Card</h2>
+            
+            <table border="1">
+                <tr><td>Name</td><td><input type="text" id="txtStudentName" readonly></td></tr>
+                <tr><td>Class</td><td><input type="number" id="txtStudentClass" readonly></td></tr>
+                <tr><td>Total Marks</td><td><input type="text" id="txtTotalMarks" readonly></td></tr>
+                <tr><td>Average</td><td><input type="text" id="txtAvgMarks" readonly></td></tr>
+                <tr><td>Grade</td><td><input type="text" id="txtGrade" readonly></td></tr>
+		<tr><td>Gradepoints</td><td><input type="text" id="txtgradepoints" readonly></td></tr>
+                <tr><td>Remarks</td><td><input type="text" id="txtResult" readonly></td></tr>
+            </table>
+    </body>
+
+</html>
+

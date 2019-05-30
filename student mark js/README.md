@@ -1,0 +1,1 @@
+The student marklist i have to create two different tables.first table for get students marks and other details and second table for to show student result.i have to use switch and for loop create two different record.In this program i learned table creation tags in html and loading external css and also learned java script functions
