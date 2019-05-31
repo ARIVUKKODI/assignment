@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
+import { Card, CardImg, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
 
@@ -32,7 +32,7 @@ renderComments(comments){
         <li key={comment.id}>
         <p>{comment.comment}</p>
         <p>{comment.author}</p>
-        <p>{comment.date}</p>
+        <p>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
         </li>
 
       );
