@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
-import DishDetail  from './DishdetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
-import { connect } from 'react-redux';
 
-
-const mapStateToProps = state => {
-  return {
-    dishes: state.dishes
-  }
-}
 
 class Main extends Component {
   constructor(props){
@@ -31,7 +23,7 @@ class Main extends Component {
       <Header />
       <Switch>
       <Route path= "/home" Component={HomePage} />
-      <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
+      <Route exact path='/menu' component={() => <Menu />} />
       <Redirect to="/home" />
       </Switch>
         <Footer />
@@ -39,4 +31,4 @@ class Main extends Component {
     );
   }
 }
- export default withRouter(connect(mapStateToProps)(Main));
+ export default Main;
